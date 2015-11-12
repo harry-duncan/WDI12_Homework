@@ -30,7 +30,7 @@ var checkAccount = function(name){   // this is the function to check the indivi
 }
 
 addAccount('harry', 500)
-addAccount('joel',500)
+addAccount('minibro',500)
 
 // this is the function to be able to deposit from individual accounts 
 
@@ -60,8 +60,9 @@ var withdraw = function(person, cash){
 	}
 }
 
+// this is working // this is the function to transfer cash
 
-var transfer = function(name1, cashMoney, name2){ // this is working // this is the function to transfer cash
+var transfer = function(name1, cashMoney, name2){ 
 			withdraw(name1, cashMoney)
 			deposit(name2, cashMoney)
 			console.log(name1 + ' lent $' + cashMoney + ' to this broke ass mofo ' + name2)
