@@ -18,86 +18,90 @@
 // // "7 stops in total."
 
 
-// There are 3 subway lines:
-
-// The N line has the following stops: Times Square, 34th, 28th, 23rd, Union Square, and 8th
-// The L line has the following stops: 8th, 6th, Union Square, 3rd, and 1st
-// The 6 line has the following stops: Grand Central, 33rd, 28th, 23rd, Union Square, and Astor Place.
-
-// All 3 subway lines intersect at Union Square, but there are no other intersection points. (For example, this means the 28th stop on the N line is different than the 28th street stop on the 6 line, so you'll have to differentiate this when you name your stops in the arrays.)
-
-
-
 // Tell the user the number of stops AND the stops IN ORDER that they will pass through or change at.
-
-// Get the program to work for a single line before trying to tackle multiple lines.
 
 // The key to the lab is finding the index positions of each stop. (hint: indexOf())
 
 
+////////////////////////////////////////////
 
-// i need a function that will take in 4 peramiters --- starting station, ending station, starting stop, ending stop 
 
-// this will be my function to take me to a destination // im going to need to store all the lines in an array and then ref the index of them to determine which line is being travesed 
+// Train lines array
 
-// indexof() will l
+// var lineN = ['Times Square', '34th', '28th', '23rd', 'Union Square', '8th']; 
+// var lineL = ['8th street', '6th', 'Union Square', '3rd', '1st']; 
+// var line6 = ['Grand Central', '33rd', '28th street', '23rd street', 'Union Square', 'Astor Place'];
 
-var lineN = ['a','b','c','d','e'];
+// Train lines object // lines.lineN[1] call var name - then key - then array position 
 
-var travelForward = function(start, end){			// need to make a function that will call two trips --- station a STOP - STOP station b
+var lines = { 
+			lineN: ['Times Square', '34th', '28th', '23rd', 'Union Square', '8th'],
+			lineL: ['8th street', '6th', 'Union Square', '3rd', '1st'],
+			line6: ['Grand Central', '33rd', '28th street', '23rd street', 'Union Square', 'Astor Place']
+};
+
+// This is the function to travel from one station to another on one line in any direction // This works 
+
+var travel = function(start, end){
 	var trip = [];
 		// debugger;
 	if (lineN.indexOf(start) < lineN.indexOf(end)){
 		for(var i = lineN.indexOf(start); i < lineN.indexOf(end); i++){
-			if (i !== lineN.indexOf(end)){			 // this will be useful for when im channg multiple lines //
+			if (i !== lineN.indexOf(end)){			 // this will be useful for when im changing multiple lines
 				trip.push(lineN[i]);
-				console.log('you are passing throuh these stations' + trip);
 			}
-		} console.log('stuff');
-	} else {
-		for(var i = lineN.indexOf(end); i < lineN.indexOf(start); i++){
+		} 
+		console.log('From ' + start + ' You will need to travel through ' + trip + ' to get to ' + end);
+	} 	else {
+			for(var i = lineN.indexOf(end); i < lineN.indexOf(start); i++){
 			console.log('stuff')
-			if (i !== lineN.indexOf(start)){ // this will be useful for when im channg multiple lines // this will need else blah blah blah 
-				trip.push(lineN[i]);
-				console.log('you are passing throuh these mofo stations');
+			if (i !== lineN.indexOf(start)){ // this will be useful for when im changing multiple lines
+			trip.push(lineN[i]);
 			}
 		}
+		console.log('You must travel through these stops' + trip);
 	}
 	return trip;
 }; 
 
+// Test calling travel() // This works 
 
-travelForward('c','a')
+travel('Times Square','8th')
 
-// these are my train lines 
+// This is the function to detect if you need to change at Union Square // This works 
 
-var lineN = []; // this needs the stops // Times Square, 34th, 28th, 23rd, Union Square, and 8th
+var detectChange = function(startLine, startStop, endLine, endStop){
+	if (startLine !== endLine){
+		console.log('you need to change at Union Square fucker')
+	} else {
+		console.log('enjoy your trip bitch')
+	}
+};
 
-var lineL = []; // this needs the stops // 8th street, 6th, Union Square, 3rd, and 1st
+// Test calling detectChange() // This works 
 
-var line6 = []; // this needs the stops // Grand Central, 33rd, 28th street, 23rd street, Union Square, and Astor Place
+// detectChange(lineN, 'Times Square', line6, 'Grand Central')
 
+// This is the function to travel to any station from any station  
 
+// var journey = function(startStation, endStation){
+// 	var result = [];
+// 	if (startStation === endStation){
+// 		console.log('Please choose another end destination')
+// 	} if else ()
 
+// 	// this will need to bring the start station and end station into the function and then first detect change at union if needed // this will be an if statement calling my detectChange function // if else 
 
+// 	// i need to print the first line stops first 
 
-// you will need to use indexof to store the value of a station into a variable to then compare thos variables in an 'if ' statement and then use slice to return
+// 	//i need to then print change if needed 
 
+// 	// then i need to print your journey continues through these other stations on the other line 
 
+// 	// then i need to tell you how painful your journey is and how many stations youre going to have to travel through
+// };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// journey('Times Square', 'Times Square')
 
 
 
