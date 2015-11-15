@@ -14,10 +14,10 @@ var scoreWord = function ( word ) {
 
   for ( var i = 0; i < word.length; i++ ) {
     var letter = word[i];
-    for ( var score in letterScores ) {
+    scoreIterator: for ( var score in letterScores ) {
       if ( letterScores[ score ].indexOf( letter ) >= 0 ) {
         wordScore += parseInt( score );
-        break;
+        break scoreIterator;
       }
     }
   }
