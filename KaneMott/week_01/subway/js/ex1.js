@@ -120,11 +120,15 @@ var travelTo = function (line1, start, line2, end){
 			var stopNum = stopsFromUnion.length + stopsToUnion.length-1;
 
 			if (line1 === line2){
-				sameLine(line1, start, end)
-				stopNum = result2.length+1
-				console.log("You are going from "+start+" to "+end+" on the "+line1+" line."+"\n"+
-							"You will go through "+start+" to "+result2.join(", ")+"."+'\n'+
-							"That's "+stopNum+" stations total.")
+
+				if (start != end){
+
+					sameLine(line1, start, end)
+					stopNum = result2.length+1
+					console.log("You are going from "+start+" to "+end+" on the "+line1+" line."+"\n"+
+								"You will go through "+start+" to "+result2.join(", ")+"."+'\n'+
+								"That's "+stopNum+" stations total.")
+				} else {console.log("Same stop.")}	
 
 			} else {
 					stopsToUnion.shift();
@@ -142,24 +146,27 @@ var travelTo = function (line1, start, line2, end){
 // -------- TEST LINES ---------
 
 
-//wrong station
+// //wrong station
 // travelTo("6", "Grand Central", "6", "28h") ;
 // console.log("\n");
 
-//wrong line
+// //wrong line
 // travelTo("g", "Grand Central", "6", "28h") ;
 // console.log("\n");
 
-// same name, different lines
-travelTo("n", "8th", "l", "8th");
-console.log("\n");
+// // Same stop.
+// travelTo("6", "23rd", "6", "23rd");
+// console.log("\n");
 
-// same line
-travelTo("6", "Astor Place", "6", "Grand Central");
-console.log("\n");
+// // same name, different lines
+// travelTo("n", "8th", "l", "8th");
+// console.log("\n");
 
-//same line not through Union
-travelTo("6", "Grand Central", "6", "23rd");
-console.log("\n");
+// // same line
+// travelTo("6", "Astor Place", "6", "Grand Central");
+// console.log("\n");
 
+// //same line not through Union
+// travelTo("6", "Grand Central", "6", "23rd");
+// console.log("\n");
 
