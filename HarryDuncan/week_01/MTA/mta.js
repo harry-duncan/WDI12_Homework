@@ -26,13 +26,7 @@
 ////////////////////////////////////////////
 
 
-// Train lines array
-
-var lineN = ['Times Square', '34th', '28th', '23rd', 'Union Square', '8th']; 
-var lineL = ['8th street', '6th', 'Union Square', '3rd', '1st']; 
-var line6 = ['Grand Central', '33rd', '28th street', '23rd street', 'Union Square', 'Astor Place'];
-
-// Train lines object // lines.lineN[1] call var name - then key - then array position 
+// Train lines object // lines.lineN[1] call var name - then key - then array position // NOT USING THIS RIGHT NOW
 
 var lines = { 
 			lineN: ['Times Square', '34th', '28th', '23rd', 'Union Square', '8th'],
@@ -40,16 +34,21 @@ var lines = {
 			line6: ['Grand Central', '33rd', '28th street', '23rd street', 'Union Square', 'Astor Place']
 };
 
+// Train lines array
+
+// var lineN = ['Times Square', '34th', '28th', '23rd', 'Union Square', '8th']; 
+// var lineL = ['8th street', '6th', 'Union Square', '3rd', '1st']; 
+// var line6 = ['Grand Central', '33rd', '28th street', '23rd street', 'Union Square', 'Astor Place'];
+
 // This is the function to travel from one station to another on one line in any direction // This works 
 
-// This is currently hard coded to work with the lineN array // I need to beable to call the value in key to make this work for all lines so I can use it on any line independantly before i then use it in my final function
 
 var travel = function(start, end){
 	var trip = [];
 		// debugger;
 	if (lineN.indexOf(start) < lineN.indexOf(end)){
 		for(var i = lineN.indexOf(start); i < lineN.indexOf(end); i++){
-			if (i !== lineN.indexOf(end)){			 // this will be useful for when im changing multiple lines
+			if (i !== lineN.indexOf(end)){			 
 				trip.push(lineN[i]);
 			}
 		} 
@@ -57,7 +56,7 @@ var travel = function(start, end){
 	} 	else {
 			for(var i = lineN.indexOf(end); i < lineN.indexOf(start); i++){
 			console.log('stuff')
-			if (i !== lineN.indexOf(start)){ // this will be useful for when im changing multiple lines
+			if (i !== lineN.indexOf(start)){
 			trip.push(lineN[i]);
 			}
 		}
@@ -66,33 +65,36 @@ var travel = function(start, end){
 	return trip;
 }; 
 
-// Test calling travel() // This works 
+// Test calling travel() HERE // This works 
 
-travel('Times Square','8th')
+// travel('Times Square','8th')
 
 // This is the function to detect if you need to change at Union Square // This works 
 
-var change = function(startLine, startStop, endLine, endStop){
+var change = function(startLine, endLine,){
 	if (startLine !== endLine){
 		console.log('you need to change at Union Square')
-	} else {
-		console.log('enjoy your trip')
+	} else if {
+		console.log('enjoy your trip');
 	}
 };
 
-change(lineN, 'Times Square', line6, 'Grand Central')  // This works 
+// Test calling change() HERE // This works
+
+// change(lineN, 'Times Square', line6, 'Grand Central')  // This works 
 
 
 // This is the function to travel to any station from any station  
 
 var journey = function(startStation, endStation){
-	var result = [];
+	var trip = [];
 	if (startStation === endStation){
-		console.log('Please choose another end destination')
-	} else if (){
-		
+		console.log('Please choose another end destination');
+	} else{
+		travel(startStation, endStation);
+		change(startStation, endStation);
+		trevel(startStation, endStation);
 	}
-
 	// this will need to bring the start station and end station into the function and then first detect change at union if needed // this will be an if statement calling my detectChange function // if else 
 
 	// i need to print the first line stops first 
@@ -104,7 +106,149 @@ var journey = function(startStation, endStation){
 	// then i need to tell you how painful your journey is and how many stations youre going to have to travel through
 };
 
-journey('Times Square', 'Times Square')
+// journey('Times Square', 'Times Square')
+// journey('Times Square','8th')
+// journey('8th street','1st')
+// journey('Grand Central','Astor Place')
+
+
+
+// var lineN = ['Times Square', '34th', '28th', '23rd', 'Union Square', '8th']; 
+// var lineL = ['8th street', '6th', 'Union Square', '3rd', '1st']; 
+// var line6 = ['Grand Central', '33rd', '28th street', '23rd street', 'Union Square', 'Astor Place'];
+
+// var travel = function(start, end){
+// 	var trip = [];
+
+// 	if (start = start) {
+
+// 		if (lineN.indexOf(start) < lineN.indexOf(end)){
+// 			for(var i = lineN.indexOf(start); i < lineN.indexOf(end); i++){
+// 				if (i !== lineN.indexOf(end)){			 
+// 					trip.push(lineN[i]);
+// 				}
+// 			} 
+// 			console.log('From ' + start + ' You will need to travel through ' + trip + ' to get to ' + end);
+// 		} 	else {
+// 				for(var i = lineN.indexOf(end); i < lineN.indexOf(start); i++){
+// 				console.log('stuff')
+// 				if (i !== lineN.indexOf(start)){
+// 				trip.push(lineN[i]);
+// 				}
+// 			}
+// 			console.log('You must travel through these stops' + trip);
+// 		} return trip;
+
+// 	} else if {
+// 		if (line6.indexOf(start) < line6.indexOf(end)){
+// 		for(var i = line6.indexOf(start); i < line6.indexOf(end); i++){
+// 			if (i !== line6.indexOf(end)){			 
+// 				trip.push(line6[i]);
+// 			}
+// 		} 
+// 		console.log('From ' + start + ' You will need to travel through ' + trip + ' to get to ' + end);
+// 	} 	else {
+// 			for(var i = line6.indexOf(end); i < line6.indexOf(start); i++){
+// 			console.log('stuff')
+// 			if (i !== line6.indexOf(start)){
+// 			trip.push(line6[i]);
+// 			}
+// 		}
+// 		console.log('You must travel through these stops' + trip);
+// 	}
+// 	return trip;
+
+// 	} else {
+// 		if (lineL.indexOf(start) < lineL.indexOf(end)){
+// 		for(var i = lineL.indexOf(start); i < lineL.indexOf(end); i++){
+// 			if (i !== lineL.indexOf(end)){			 
+// 				trip.push(lineL[i]);
+// 			}
+// 		} 
+// 		console.log('From ' + start + ' You will need to travel through ' + trip + ' to get to ' + end);
+// 	} 	else {
+// 			for(var i = lineL.indexOf(end); i < lineL.indexOf(start); i++){
+// 			console.log('stuff')
+// 			if (i !== lineL.indexOf(start)){
+// 			trip.push(lineL[i]);
+// 			}
+// 		}
+// 		console.log('You must travel through these stops' + trip);
+// 	}
+// 	return trip;
+// 	}
+// };
+
+// travel('Times Square','8th')
+// travel('8th street','1st')
+// travel('Grand Central','Astor Place')
+
+
+
+
+
+
+
+
+
+
+// var change = function(startLine, startStop, endLine, endStop){
+// 	var trip = [];
+// 	if (startLine !== endLine){
+// 		console.log('you need to change at Union Square')
+// 	} else if {
+// 		console.log('enjoy your trip')
+// 	} else{
+// 			if (lines.indexOf(startStop) < lines.indexOf(endStop)){
+// 		for(var i = lines.indexOf(start); i < lines.indexOf(end); i++){
+// 			if (i !== lines.indexOf(end)){			 
+// 				trip.push(lines[i]);
+// 			}
+// 		} 
+// 		console.log('From ' + start + ' You will need to travel through ' + trip + ' to get to ' + end);
+// 	} 	else {
+// 			for(var i = lines.indexOf(endStop); i < lines.indexOf(startStop); i++){
+// 			console.log('stuff')
+// 			if (i !== lines.indexOf(startStop)){
+// 			trip.push(lines[i]);
+// 			}
+// 		}
+// 		console.log('You must travel through these stops' + trip);
+// 	}
+// 	return trip;
+// 	}
+
+// };
+
+
+// change('lineN','Times Square', 'line6', '33rd')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
