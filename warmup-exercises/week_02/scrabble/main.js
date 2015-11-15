@@ -21,3 +21,5 @@ var score = function ( word ) {
   console.log( "The score of the word " + word + " is " + wordScore + "." );
   return wordScore;
 };
+
+score( "ampERS&" );
