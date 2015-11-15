@@ -129,9 +129,9 @@ var listTripSingleLine = function(lineName, line, stationOne, stationTwo) {
 	var count = 0;
 	var tripMessage = "Travel through the following stops on the " + lineName + " line: ";
 
-	// if station 2 is after union square
+	// if station 2 is after station 1
 	if (stationTwo > stationOne) {
-		// start listing from one stop after union station
+		// start listing from one stop after station 1
 		for (var i = stationOne + 1; i <= stationTwo; i++) {
 			if (i !== stationTwo) {
 				tripMessage += line[i] + ", ";
@@ -143,9 +143,9 @@ var listTripSingleLine = function(lineName, line, stationOne, stationTwo) {
 		}
 	}
 
-	// else if station 2 is before union square
+	// else if station 2 is before station 1
 	else {
-		// start lisiting from one stop after union station
+		// start lisiting from one stop after station 1
 		for (var i = stationOne - 1; i >= stationTwo; i--) {
 			if (i !== stationTwo) {
 				tripMessage += line[i] + ", ";
