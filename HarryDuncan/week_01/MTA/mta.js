@@ -28,9 +28,9 @@
 
 // Train lines array
 
-// var lineN = ['Times Square', '34th', '28th', '23rd', 'Union Square', '8th']; 
-// var lineL = ['8th street', '6th', 'Union Square', '3rd', '1st']; 
-// var line6 = ['Grand Central', '33rd', '28th street', '23rd street', 'Union Square', 'Astor Place'];
+var lineN = ['Times Square', '34th', '28th', '23rd', 'Union Square', '8th']; 
+var lineL = ['8th street', '6th', 'Union Square', '3rd', '1st']; 
+var line6 = ['Grand Central', '33rd', '28th street', '23rd street', 'Union Square', 'Astor Place'];
 
 // Train lines object // lines.lineN[1] call var name - then key - then array position 
 
@@ -41,6 +41,8 @@ var lines = {
 };
 
 // This is the function to travel from one station to another on one line in any direction // This works 
+
+// This is currently hard coded to work with the lineN array // I need to beable to call the value in key to make this work for all lines so I can use it on any line independantly before i then use it in my final function
 
 var travel = function(start, end){
 	var trip = [];
@@ -70,38 +72,39 @@ travel('Times Square','8th')
 
 // This is the function to detect if you need to change at Union Square // This works 
 
-var detectChange = function(startLine, startStop, endLine, endStop){
+var change = function(startLine, startStop, endLine, endStop){
 	if (startLine !== endLine){
-		console.log('you need to change at Union Square fucker')
+		console.log('you need to change at Union Square')
 	} else {
-		console.log('enjoy your trip bitch')
+		console.log('enjoy your trip')
 	}
 };
 
-// Test calling detectChange() // This works 
+change(lineN, 'Times Square', line6, 'Grand Central')  // This works 
 
-// detectChange(lineN, 'Times Square', line6, 'Grand Central')
 
 // This is the function to travel to any station from any station  
 
-// var journey = function(startStation, endStation){
-// 	var result = [];
-// 	if (startStation === endStation){
-// 		console.log('Please choose another end destination')
-// 	} if else ()
+var journey = function(startStation, endStation){
+	var result = [];
+	if (startStation === endStation){
+		console.log('Please choose another end destination')
+	} else if (){
+		
+	}
 
-// 	// this will need to bring the start station and end station into the function and then first detect change at union if needed // this will be an if statement calling my detectChange function // if else 
+	// this will need to bring the start station and end station into the function and then first detect change at union if needed // this will be an if statement calling my detectChange function // if else 
 
-// 	// i need to print the first line stops first 
+	// i need to print the first line stops first 
 
-// 	//i need to then print change if needed 
+	//i need to then print change if needed 
 
-// 	// then i need to print your journey continues through these other stations on the other line 
+	// then i need to print your journey continues through these other stations on the other line 
 
-// 	// then i need to tell you how painful your journey is and how many stations youre going to have to travel through
-// };
+	// then i need to tell you how painful your journey is and how many stations youre going to have to travel through
+};
 
-// journey('Times Square', 'Times Square')
+journey('Times Square', 'Times Square')
 
 
 
