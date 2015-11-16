@@ -101,7 +101,7 @@ var printTrip = function(startLine, endLine, trip){
     var us = trip.indexOf('Union Square');
     msg += trip.slice(0, us + 1).join(', ') + '.' + '\nChange at union square.\n' +
           "Your journey continues through the following stops on the " + endLine +
-          " line: " + trip.slice(us + 1).join(', ') + '.';
+          " line: " + trip.slice(us + 1).join(', ') + '.' + " # stops: " + trip.length;
   }else{
     msg += trip.join(', ') + '.';
   }
@@ -113,7 +113,7 @@ var printTrip = function(startLine, endLine, trip){
 // var t = planTrip('N', '34th', 'N', '34th');        // same line and stop
 // var t = planTrip('6', 'Grand Central', '6', 'Astor Place');    // line 6 all stops
 // var t = planTrip('L', '8th', 'L', '1st');          // line L all stops
-// var t = planTrip('N', 'Times Square', '6', '33rd');  // diff lines forward then backward
+var t = planTrip('N', 'Times Square', '6', '33rd');  // diff lines forward then backward
 // var t = planTrip('6', 'Astor Place', 'L', '8th');    // diff lines backwards
 // var t = planTrip('6', 'Union Square', 'L', 'Union Square');  // diff lines same station
 // var t = planTrip('L', '1st', 'N', '8th');               // diff lines backward then forward
