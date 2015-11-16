@@ -176,13 +176,13 @@ var planTrip = function(lineNameBoarding, lineStopBoarding, lineNameDeparture, l
 // };
 
 
-// var startingLine = prompt("Please enter your starting subway line name:");
-// var startingStation = prompt("Please enter the name of the stop you are boarding from:");
-// var departureLine = prompt("Please enter your disembarking subway line name:");
-// var departureStation = prompt("Please enter the name of the stop you are departing from:");
-// planTrip( startingLine, startingStation, departureLine, departureStation );
+var startingLine = prompt("Please enter your starting subway line name:");
+var startingStation = prompt("Please enter the name of the stop you are boarding from:");
+var departureLine = prompt("Please enter your disembarking subway line name:");
+var departureStation = prompt("Please enter the name of the stop you are departing from:");
+planTrip( startingLine, startingStation, departureLine, departureStation );
 
-planTrip( "N", "28th", "6", "33rd" );
+// planTrip( "N", "28th", "6", "33rd" );
 
 // planTrip(subLines.N [1], null, null, null);
 
