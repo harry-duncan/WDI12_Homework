@@ -1,0 +1,30 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.insvisible {
+	display: none;
+}
+
+nav {
+	position: fixed;
+	background-color: black;
+	max-width: 1200px;
+	width: 100%;
+	height: 75px;
+	margin: 0 auto;
+	padding-top: 0;
+}
+
+nav li {
+	display: inline-block;
+	color: white;
+	padding-left: 100px;
+}

@@ -1,0 +1,333 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.insvisible {
+	display: none;
+}
+
+/* NAVIGATION */
+
+nav {
+	position: fixed;
+	background-color: #FF53FF;
+	padding-left: 0;
+	width: 100%;
+	height: 50px;
+	margin: 0;
+	padding-top: 0;
+	z-index: 0;
+}
+
+
+.navButton a {
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	line-height: 55px;
+}
+
+ul {
+	padding-left: 0;
+}
+
+li {
+	display: inline-block;
+	padding-left: 200px;
+	line-height: 18px;
+}
+
+li:first-child {
+	padding-left: 150px;
+}
+
+li:hover {
+	padding-left: 180px;
+}
+
+/* IMAGES */
+
+/* flames */
+
+.flames img {
+	border: 5px solid #00FFFF;
+	width: 150px;
+	height: 150px;
+	background-color: #00FF00;
+	overflow: hidden;
+	position: relative;
+	margin-left: 0;
+	margin-top: 0px;	
+}
+
+.flames img:hover {
+		z-index: -1;
+		width: 500px;
+		height: 500px;
+		background-color: none;
+}
+
+
+/* jenn */
+
+.jennimg img {
+	width:200px;
+	height:200px;
+	padding-left: 500px;
+}
+
+.jennimg img:hover {
+
+	background-color: #00FFFF;
+	z-index: -1;
+}
+
+/* DEFUQ*/
+
+
+.defuq img {
+	border: 5px solid #00FFFF;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	position: relative;
+	margin-left: 0;
+	margin-top: 0px;	
+}
+
+
+.defuq img:hover {
+		z-index: -1;
+		width: 270px;
+		height: 270px;
+		background-color: none;
+}
+
+/* DOGE */
+
+
+.disneydoge {
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	top: 285px;
+}
+
+.fire img {
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	left: 600px;
+	z-index: -1;
+
+}
+
+/* PAGES PAGES PAGES MOFO */
+
+.home {
+	height: 600px;
+	border: 5px solid #FF53FF;
+	background-image: 
+}
+
+.about {
+		height: 600px;
+		border: 5px solid #00FFFF;
+}
+
+.facts {
+	height: 600px;
+	border: 5px solid #FF53FF;
+}
+
+.social {
+		height: 600px;
+		border: 5px solid #00FFFF;
+}
+
+.contact {
+		height: 600px;
+		border: 5px solid #FF53FF;
+}
+
+
+/* ALL THE OTHER SHIT */
+/*p {
+	text-align: center;
+	padding-top: 0px;
+	font-family: monospace;
+	margin:0px 250px;
+	padding-left: 250px;
+}*/
+
+p:hover {
+	background-color: #AA00FF;
+	z-index: -1;
+}
+
+h1 {
+	text-align: center;
+	font-size: 50px;
+	padding: 0;	
+	margin: 0;
+	z-index: 99;
+}
+
+h3 {
+	padding-left: 45px;
+	background-color: red;
+}
+
+h4 {
+	padding-left: 00px
+}
+
+.name h1 {
+	margin: 0 auto;
+	padding-left: 290px;
+}
+
+.label div {
+	font-size: 100px;
+	background-color: yellow;
+}
+
+
+.suchwow p {
+	position: absolute;
+	left: 725px;px;
+	top: 310px;
+	line-height: 25px;
+}
+
+.bullshit {
+	margin: 0 auto;
+	width: 100%;
+	color: #FF53FF;
+}
+
+iframe {
+	padding-top: 100px;
+	padding-left: 450px;
+	width: 500px;
+	height: 250px;
+
+}
+
+a {
+	display: block;
+	font-family: ;
+	color: orange;
+}
+
+.info {
+	position: absolute;
+	bottom: -1200px;
+	color: blue;
+}
+
+.runningoutofnames {
+	position: absolute;
+	left: 750px;
+	bottom: -1100px;
+	color: red;
+}
+
+iframe {
+	border: 5px solid yellow;
+}
+
+iframe:hover {
+	border: 15px solid #00FFFF;
+}
+
+
+
+img {
+	width: 150px;
+	height: 150px;
+}
+/*/////// DOGE BALL ////////*/
+
+#doge-ball{
+    height: 100px;
+    width: 100px;
+    background: url('');
+    background-size: 60px;
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    border: 5px solid yellow;
+
+
+   -webkit-animation: horizontal 6s, vertical 7s;
+   -webkit-animation-timing-function: linear;
+   -webkit-animation-iteration-count: infinite;
+
+   -moz-animation: horizontal 6s, vertical 7s;
+   -moz-animation-timing-function: linear;
+   -moz-animation-iteration-count: infinite;
+}
+@-webkit-keyframes vertical {
+    0% { top: 0;}
+    50% { top: 100%;}
+    100%{top:0;}
+}
+@-webkit-keyframes horizontal {
+    0% { left: 0;}
+    50% { left: 100%;}
+    100%{left:0;}
+}
+@-moz-keyframes vertical {
+    0% { top: 0;}
+    50% { top: 100%;}
+    100%{top:0;}
+}
+@-moz-keyframes horizontal {
+    0% { left: 0;}
+    50% { left: 100%;}
+    100%{left:0;}
+}
+
+
+
+/*
+/////// plane /////*/
+
+
+html{
+}
+
+.planePath {
+  stroke: #D9DADA;
+  stroke-width: .1%;
+  stroke-width: .5%;
+  stroke-dasharray: 1% 2%;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.fil1 {
+  fill: #D9DADA;
+}
+
+.fil2 {
+  fill: #C5C6C6;
+}
+
+.fil4 {
+  fill: #9D9E9E;
+}
+
+.fil3 {
+  fill: #AEAFB0;
+}
+
+///
