@@ -21,7 +21,7 @@ var rectangle = {
 
 
 var isSquare = function(obj) {
-if (obj.length === obj.width) {
+if (rectangle.length === rectangle.width) {
 	return true;
 }	
 else { 
