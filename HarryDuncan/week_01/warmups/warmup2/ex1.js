@@ -31,7 +31,7 @@ var leapOrNot = function(year){
 var doubleCheck = function(year){
 	var result = leapOrNot();
 	if (result % 4 === 0){
-	console.log(year + " is in fact a leap year. YAY Olympic games!");
+		console.log(year + " is in fact a leap year. YAY Olympic games!");
 	} 
 };
 
