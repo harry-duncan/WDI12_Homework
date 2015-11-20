@@ -109,7 +109,7 @@ var bank = {
 							break;
 
 						} else {
-							console.log(name + "'s balance is not enough");
+							console.log(name + "'s balance is not enough.");
 						}
 
 						isYourAccount = true;
@@ -130,8 +130,9 @@ var bank = {
 
 }
 
-bank.withdraw("miki", 10); //違う名前のとき、問題あり。名前が一致していればOK.
-
+bank.withdraw("Mylan", 10); //違う名前のとき、問題あり。名前が一致していればOK.
+bank.withdraw("Mylan", 100);
+bank.withdraw("Ru", 10);
 
 
 
