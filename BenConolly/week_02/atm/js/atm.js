@@ -29,9 +29,6 @@ var savingsBalance = function () {
 }
 
 
-
-
-
 //Deposit checking
 $( document ).ready(function () {
 	var $chCurrent = $("#checking-balance");
