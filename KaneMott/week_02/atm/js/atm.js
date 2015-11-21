@@ -7,18 +7,18 @@ var $savingsInput = $("#savings-amount");
 var transaction = {
 
 	cDeposit: function (){
-	var $checkingInput = parseInt($("#checking-amount").val());
-	var $inCheck = parseInt($('#checking-balance').text().replace('$',''));
+	var $checkingInput = parseFloat($("#checking-amount").val());
+	var $inCheck = parseFloat($('#checking-balance').text().replace('$',''));
 	var newSum = $inCheck + $checkingInput;
-	$('#checking-balance').text("$"+newSum)
+	$('#checking-balance').text("$"+newSum.toFixed(2))
 	return newSum;
 	},
 
 	cWithdraw: function(){
-	var $checkingInput = parseInt($("#checking-amount").val());
-	var $inCheck = parseInt($('#checking-balance').text().replace('$',''));
-	var $savingsInput = parseInt($("#savings-amount").val());
-	var $inSavings = parseInt($('#savings-balance').text().replace('$',''));
+	var $checkingInput = parseFloat($("#checking-amount").val()).toFixed(2);
+	var $inCheck = parseFloat($('#checking-balance').text().replace('$','')).toFixed(2);
+	var $savingsInput = parseFloat($("#savings-amount").val());
+	var $inSavings = parseFloat($('#savings-balance').text().replace('$','')).toFixed(2);
 	var newSum = null;
 
 
@@ -30,32 +30,32 @@ var transaction = {
 				newSum = $inSavings - ($checkingInput - $inCheck);
 				// newSum is our total funds with the deposit taken out, original account set to zero and the remainder is put in the second account.
 				$('#checking-balance').text("$0")
-				$('#savings-balance').text("$"+newSum)
+				$('#savings-balance').text("$"+newSum.toFixed(2))
 				return newSum;
 			}
 			
 		// if it won't overdraw, do the transaction.
 		} else {
 		newSum = $inCheck - $checkingInput;
-		$('#checking-balance').text("$"+newSum);
-		return newSum;
+		$('#checking-balance').text("$"+newSum.toFixed(2));
+		return newSum.toFixed(2);
 		};
 	},
 
 
 	sDeposit: function (){
-	var $savingsInput = parseInt($("#savings-amount").val());
-	var $inSavings = parseInt($('#savings-balance').text().replace('$',''));
+	var $savingsInput = parseFloat($("#savings-amount").val());
+	var $inSavings = parseFloat($('#savings-balance').text().replace('$',''));
 	var newSum = $inSavings + $savingsInput;
-	$('#savings-balance').text("$"+newSum)
-	return newSum;
+	$('#savings-balance').text("$"+newSum.toFixed(2))
+	return newSum.toFixed(2);
 	},
 
 	sWithdraw: function(){
-	var $checkingInput = parseInt($("#checking-amount").val());
-	var $inCheck = parseInt($('#checking-balance').text().replace('$',''));
-	var $savingsInput = parseInt($("#savings-amount").val());
-	var $inSavings = parseInt($('#savings-balance').text().replace('$',''));
+	var $checkingInput = parseFloat($("#checking-amount").val()).toFixed(2);
+	var $inCheck = parseFloat($('#checking-balance').text().replace('$','')).toFixed(2);
+	var $savingsInput = parseFloat($("#savings-amount").val());
+	var $inSavings = parseFloat($('#savings-balance').text().replace('$','')).toFixed(2);
 	var newSum = null;
 
 		// If the withdrawal will take the account below zero
@@ -65,25 +65,25 @@ var transaction = {
 				newSum = $inCheck - ($savingsInput - $inSavings);
 				// newSum is our total funds with the deposit taken out, original account set to zero and the remainder is put in the second account.
 				$('#savings-balance').text("$0")
-				$('#checking-balance').text("$"+newSum)
-				return newSum;
+				$('#checking-balance').text("$"+newSum.toFixed(2))
+				return newSum.toFixed(2);
 			}
 			
 		// if it won't overdraw, do the transaction.
 		} else {
 		newSum = $inSavings - $savingsInput;
-		$('#savings-balance').text("$"+newSum);
-		return newSum;
+		$('#savings-balance').text("$"+newSum.toFixed(2));
+		return newSum.toFixed(2);
 		};
 	},
 
 	// Changes the background depending on whether our account is at zero or not.
 	isNull: function(){
-		if (parseInt($('#savings-balance').text().replace('$','')) === 0){
+		if (parseFloat($('#savings-balance').text().replace('$','')) === 0){
 			$('#savings-balance').css("background-color", "red")
 		} else { $('#savings-balance').css("background-color", "#E3E3E3") }
 
-		if (parseInt($('#checking-balance').text().replace('$','')) === 0){
+		if (parseFloat($('#checking-balance').text().replace('$','')) === 0){
 			$('#checking-balance').css("background-color", "red")
 		} else { $('#checking-balance').css("background-color", "#E3E3E3") }
 	}
