@@ -61,6 +61,8 @@ var currentBal = function (name) {
 var accBal = function (name) {
 	return "$" + currentBal(name);
 }
+// End reference functions
+
 
 // Make a new account
 var aNewAccount = function (name, balance) {
