@@ -45,18 +45,18 @@ def travel start_line, start_stop, end_line, end_stop
 	trip_start = []
 	trip_end = []
 
-	if start_line == end_line
+	if start_line == end_line # Travel forward and back on one line 
 
 		start_point = lines[start_line].index(start_stop)
 		end_point = lines[end_line].index(end_stop)
 
-		if start_point < end_point
+		if start_point < end_point # Travel forward 
 			lines[start_line][start_point..end_point].each do |x|
 				trip << x
 			end
 			puts "You need to travel through these stations".green
 			puts trip.join(' ')
-		else  
+		else  # Travel back
 			lines[start_line][end_point..start_point].reverse.each do |x|
 				trip << x
 			end
@@ -64,21 +64,21 @@ def travel start_line, start_stop, end_line, end_stop
 			puts trip.join(' ')
 		end
 
-	elsif start_line != end_line 
+	elsif start_line != end_line # travel forward and back through multiple lines and change at Union Square
 
 		start_point = lines[start_line].index(start_stop)
 		end_point = lines[end_line].index(end_stop)
 		union_start = lines[start_line].index("Union Square")
 		union_end = lines[end_line].index("Union Square")
 
-		if start_point < union_start
+		if start_point < union_start # Travel forward to Union Square
 			lines[start_line][start_point..union_start].each do |x|
 				trip_start << x
 			end
 			puts "You need to travel through these stations to Union".green
 			puts trip_start.join(' ')
 			puts "You need to change at Union Square".red
-		else start_point > union_start
+		else start_point > union_start # Travel back to  Union Square 
 			lines[start_line][union_start..start_point].reverse.each do |x|
 				trip_start << x
 			end
@@ -87,13 +87,13 @@ def travel start_line, start_stop, end_line, end_stop
 			puts "You need to change at Union Square".red
 		end
 
-		if end_point < union_end
+		if end_point < union_end # Travel from Union Square 
 			lines[end_line][end_point..union_end].reverse.each do |x|
 				trip_end << x
 			end
 			puts "You need to travel through these stations from Union".green
 			puts trip_end.join(' ')
-		else end_point > union_end
+		else end_point > union_end # Travel back from Union Square
 			lines[end_line][union_end..end_point].reverse.each do |x|
 				trip_end << x
 			end
