@@ -1,0 +1,73 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600italic,600);
+
+* {
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+html {
+	background-color: black;	
+}
+
+.container {
+	background-color: black;
+	color: white;
+	width: 100vw;
+	height: 100vh;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 250px;
+}
+
+.button_yes {
+	background-color: #5bb75b;
+	color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-repeat: repeat-x;
+	text-decoration: none;
+	
+}
+
+.button_no {
+	background-color: #ED5E5A;
+	color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-repeat: repeat-x;
+	text-decoration: none;
+}
+
+.button_ok {
+	background-color: #0076CC;
+	color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-repeat: repeat-x;
+	text-decoration: none;
+}
+
+li {
+	display: inline-block;
+	margin: 0 15px;
+	padding: 11px 19px;
+ 	font-size: 17.5px;
+	border-radius: 6px;
+	line-height: 20px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	letter-spacing: 3px;
+	text-align: center;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}
+
+p {
+	color: white;
+	position: absolute;
+	bottom: 200px;
+	right: 450px;
+}
