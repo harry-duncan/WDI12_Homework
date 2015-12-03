@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,800,300);
+
 * {
 	box-sizing: border-box;
 }
@@ -5,9 +7,17 @@
 .container {
 	width: 100vw;
 	height: 100vh;
+	font-family: 'Merriweather Sans', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
 /*	background-image: url('http://www.mixmag.net/assets/uploads/images/_full/RlGrimeRegentTheater.jpg');
 	background-size: cover;*/
 
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
 }
 
 input {
@@ -15,19 +25,156 @@ input {
 	margin-top: 10px;
 }
 
-img, iframe {
-	filter: grayscale(100%);
-}
-
 nav {
 	text-align: center;
 }
+
 h1 {
 	margin: 0 auto;
 	text-align: center;
 	padding-top: 50px;
+	color: white;
+}
+
+h2 {
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 15px;
+	color: white;
+}
+
+nav {
+	width: 100%;
+	height: 50px;
+	margin: 0 auto;
+	padding-top: 15px;
+	line-height: 1;
+	background-color: black;
+
+}
+
+nav a {
+margin: 0 auto;
+text-align: center;
+text-decoration: none;
+padding-left: 10px;
+color: white;
+}
+
+nav a:hover {
+	color: lightblue;
+}
+
+ul li {
+ text-align: center;
+ text-decoration: none;
+ display: block;
+ padding-top: 4px;
 }
 
 a {
-/*	color: white;*/
+	text-decoration: none;
+	margin-right: 30px;
+	color: white;
+}
+
+a:hover {
+	color: lightblue;
+}
+
+ul {
+	text-align: center;
+}
+
+p.mainstage{
+	text-align: center;
+	line-height: 2;
+	color: white;
+}
+
+.main {
+	width: 100%;
+	height: 100%;
+	background-image: url(https://40.media.tumblr.com/4f959bb8e1fb09f6c67f9d7ddb19cea3/tumblr_nxze6xgLxT1rzy2q5o1_500.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.producers {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) ), url('http://2.bp.blogspot.com/-FBgnTUyOWd8/U6ygcNHW9dI/AAAAAAAACQg/FQ5bUYIprSw/s1600/20130313-deadmau5-x595-1363215319.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+form {
+	text-align: center;
+	color: white;
+	padding-top: 50px;
+}
+
+input {
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	margin-top: 5px;
+	opacity: 50%;
+}
+
+button {
+	text-transform: uppercase;
+}
+
+button:hover {
+	color: lightblue;
+}
+.newartist {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) ), url('http://i.ytimg.com/vi/rU5vFOf-S6w/maxresdefault.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.artnav {
+	width: 100%;
+	height: 50px;
+	margin: 0 auto;
+	padding-top: 15px;
+	line-height: 1;
+	background-color: black;
+}
+
+.artnav a {
+	margin: 0 auto;
+	text-align: center;
+	text-decoration: none;
+	padding-left: 10px;
+	color: white;
+}
+
+.artnav a:hover {
+	color: lightblue;
+	text-align: center;
+	margin: 0 auto;
+
+}
+
+.artnav a {
+	text-align: center;
+ 	text-decoration: none;
+ 	display: block;
+ 	margin-top: 0;
+}
+
+h3 {
+	text-align: center;
+}
+
+img {
+	margin: 0 auto;
 }

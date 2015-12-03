@@ -1,10 +1,12 @@
-<h2>Music Artists</h2>
-<ul>
- <% @artists.each do |art| %>
- 	<li>
- 		<a href="/artists/<%= art['id'] %>">
- 		<%= art['name'] %>
- 		</a>
- 	</li>
- <% end %>
-</ul>
+<div class="producers">
+	<h2>Music Artists</h2>
+	<ul>
+	 <% @artists.each do |art| %>
+	 	<li>
+	 		<a href="/artists/<%= art['id'] %>">
+	 		<%= art['name'] %>
+	 		</a>
+	 	</li>
+	 <% end %>
+	</ul>
+</div>
