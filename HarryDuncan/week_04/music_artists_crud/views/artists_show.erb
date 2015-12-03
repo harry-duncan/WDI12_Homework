@@ -1,0 +1,14 @@
+<a href="/artists/<%= @artist['id']%>/delete">UnFollow Artist</a>
+<a href="/artists/<%= @artist['id']%>/edit">Update Artist info</a>
+
+<h2><%= @artist['name']%></h2>
+<h3>Stage Name: <%= @artist['stage_name']%></h3>
+<h3>Genre: <%= @artist['genre']%></h3>
+<h3>Label: <%= @artist['label']%></h3>
+<h3>Website: <%= @artist['site']%></h3>
+
+<% unless @artist['image'].nil? %>
+	<img src="<%= @artist['image'] %>" alt="">
+<% end %>
+
+<%= @artist['sound']%>

@@ -1,0 +1,17 @@
+<form action="/artists/<%=@artist['id']%>" method="post">
+	<label for="">Name:</label>
+	<input type="text" name="name" value="<%= @artist['name']%>">
+	<label for="">Stage Name:</label>
+	<input type="text" name="stage_name" value="<%= @artist['stage_name']%>">
+	<label for="">Genre:</label>
+	<input type="text" name="genre" value="<%= @artist['genre']%>">
+	<label for="">Label</label>
+	<input type="text" name="label" value="<%= @artist['label']%>">
+	<label for="">Image</label>
+	<input type="text" name="image" value="<%= @artist['image']%>">
+	<label for="">Website URL</label>
+	<input type="text" name="site" value="<%= @artist['site']%>">
+	<label for="">Soundcloud Embedd</label>
+	<input type="text" name="sound" value="<%= @artist['sound']%>">
+	<button>Update Producer</button>
+</form>
