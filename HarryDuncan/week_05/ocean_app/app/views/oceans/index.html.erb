@@ -1,0 +1,11 @@
+<p>This is the index listing for the oceans </p>
+
+<ul>
+	<%@oceans.each do |ocean|%>
+		<li>
+			<a href="/oceans/<%=ocean.id%>"><%=ocean.name%></a>
+		</li>
+	<%end%>
+</ul>
+
+<img src="http://www.enchantedlearning.com/ogifs/Oceans.GIF" alt="Map of oceans">
