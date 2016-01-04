@@ -1,0 +1,16 @@
+<h1>All Producers</h1>
+
+<ul>
+	<% @producers.each do |producer| %>
+	<li>
+		<ul>
+			<li><%= image_tag(producer.image, :class => 'thumb') %></li>
+			<li><%= link_to(producer.name, producer) %></li>
+			<li><%= producer.stage_name %></li>
+			<li><%= producer.genre %></li>
+			<li><%= producer.soundcloud_link %></li>
+		</ul>
+	</li>
+	<% end %>
+</ul>
+

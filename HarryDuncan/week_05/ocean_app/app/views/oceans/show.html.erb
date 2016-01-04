@@ -2,3 +2,7 @@
 <p>The area of the <%=@ocean.name%> is <%=@ocean.area%> sq km</p>
 <p>The average depth of the <%=@ocean.name%> is <%=@ocean.average_depth%> m</p>
 <p>The deepest depth of the <%=@ocean.name%> is <%=@ocean.deepest_depth%> m</p>
+
+<%=button_to('Destroy ocean', "/oceans/#{@ocean.id}",:method => :delete)%>
+<%=link_to('Edit ocean', "/oceans/#{@ocean.id}/edit")%>
+

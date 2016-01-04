@@ -1,0 +1,15 @@
+<h1><%= @producer.name %></h1>
+
+<%= image_tag(@producer.image, :class => 'thumb') %>
+
+<ul>
+	<li>Name: <%= link_to(@producer.name, @producer) %></li>
+	<li>Stage Name: <%= @producer.stage_name%></li>
+	<li>Genre: <%= @producer.genre %></li>
+	<li>Soundcloud: <%= @producer.soundcloud_link %></li>
+</ul>
+
+<div class="controls">
+	<%= link_to 'Edit Producer', edit_producer_path(@producer) %>
+	<%= link_to 'Delete Producer', @producer, :method => :delete, :data => {:confirm => "Are you susre you want to do this?"} %>
+</div> 

@@ -1,0 +1,24 @@
+<%= form_for @producer do |f| %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :stage_name %>
+		<%= f.text_field :stage_name %>
+	</p>
+	<p>
+		<%= f.label :genre %>
+		<%= f.text_field :genre %>
+	</p>
+	<p>
+		<%= f.label :soundcloud_link %>
+		<%= f.text_field :soundcloud_link %>
+	</p>
+	<p>
+		<%= f.label :image %>
+		<%= f.text_field :image %>
+	</p>
+
+	<%= f.submit %>
+<% end %>
