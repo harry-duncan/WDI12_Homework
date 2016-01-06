@@ -1,3 +1,9 @@
+.container {
+	margin: 0 auto;
+	text-align: center;
+	width: 80vw;
+	height:100vh;
+}
 #photo {
 /*	display: block;*/
 	margin: 0 auto;
@@ -8,3 +14,30 @@
 form {
 	margin-bottom: 10px;
 }
+
+body {
+	padding-top: 70px; 
+
+}
+
+#search-results {
+	margin-bottom: 25px;
+}
+
+#search-number {
+	color: #66afe9;
+}
+
+#results, li, a, img {
+	text-decoration: none;
+	display: inline-block;
+
+}
+
+/*#results:hover {
+	pointer-events:none;
+}
+
+#dont-hover-yet {
+	pointer-events:none;
+}*/
