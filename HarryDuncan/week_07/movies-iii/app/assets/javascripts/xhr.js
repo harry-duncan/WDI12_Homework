@@ -1,23 +1,15 @@
-// var request = new XMLHttpRequest():
-// request.open('GET', 'http://omdbapi.com/?t=alien');
-// request.send();
-// var info = JSON.parse( request.responseText); // This needs to be in a callback
-
-
 $(document).ready(function(){
-	$('#get-info').on('click', function(){
+	var search = function(e){
+		e.preventDeafult();
 
-		var request = new XMLHttpRequest();
-		var title = $('#title').val();
-		request.open('GET', 'http://omdbapi.com/?t=' + title);
+		var query = $('#get-info').val();
 
-		request.onreadystatechange = function(){
-			if (request.readyState !== 4){
-				return;
-			}
-			var info = JSON.parse(request.responseText);
-			$('#result').attr('src', info['Poster']);
-		}
-		request.send();
-	});
+		$.ajax('http://omdbapi.com/?t=' + query).done(function(info){
+			var $img = $('<img />');
+			$img.attr('src', info['poster']);
+			$img.prependTo('#results');
+		})
+	}
+	$('form').on('submit', search);
 });
+
