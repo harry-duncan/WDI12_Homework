@@ -1,6 +1,7 @@
 var totalPages = 0;
 var currentPage;
 var searchResults;
+var title = "no title avaliable fucker";
 
 var searchFlickr = function (query){
 	var flickrUrl = 'https://api.flickr.com/services/rest/?jsoncallback=?';
@@ -21,7 +22,7 @@ var searchFlickr = function (query){
   });
 };
 
-var generateURL = function (photo){
+var generateURL = function (photo, size){
 	return [
 		'http://farm',
 		photo.farm,
@@ -31,10 +32,9 @@ var generateURL = function (photo){
 		photo.id,
 		'_',
 		photo.secret,
-		'_q.jpg' // Change here for different sizes when styling
+		'_' + size + '.jpg' // Change here for different sizes when styling
 	].join('');
 };
-
 
 var updatePage = function (){
 	if (currentPage < totalPages){
@@ -44,12 +44,14 @@ var updatePage = function (){
 	}
 };
 
+
 var displayPhotos = function (photos){
 		var images = '';
 	_.each(photos, function(photo){
-		var photoURL = generateURL(photo);
-		images += '<li><a id="dont-hover-yet" data-target="#myModal" href="#myModal" data-toggle="modal"><img id="photo" src="' + photoURL + '"></a></li>';
-
+		title = photo.title;
+		var photoURL = generateURL(photo, 'q');
+		var largerPhoto = generateURL(photo, 'c');
+		images += '<a data-lightbox="image-1" data-title="' + title + '" href="' + largerPhoto + '" data-toggle=><img class="" id="photo" src="' + photoURL + '"></a>';
 	});
 	$('#results').append(images);
 	if (currentPage === 1){
@@ -73,9 +75,9 @@ $(document).ready(function (){
 	});
 
 	var searchAgain = _.debounce(function (){
-			var query = $('#query').val();
-			searchFlickr(query);
-		}, 100);
+		var query = $('#query').val();
+		searchFlickr(query);
+	}, 100);
 
 	$('#query').on('change', refresh);
 
@@ -84,12 +86,7 @@ $(document).ready(function (){
 		$('li a').click(function (e) {
     // $('#myModal img').attr('src', "' + photoURL + '";
 		});
-		if (scrollBottom > 300) {return;};
+		if (scrollBottom > 275) {return;};
 		searchAgain();
 	});
 });
-
-
-
-
-// Make sure to add a load bar into the bottom // Optional extra

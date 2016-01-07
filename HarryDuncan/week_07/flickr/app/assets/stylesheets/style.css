@@ -41,3 +41,7 @@ body {
 #dont-hover-yet {
 	pointer-events:none;
 }*/
+
+#search-number {
+	margin-top: 15px;
+}
