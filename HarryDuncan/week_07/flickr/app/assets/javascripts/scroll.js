@@ -12,3 +12,18 @@ $(document).ready(function(){
         });
     }); 
 });
+
+
+var thursday = {
+    rob: 0,
+    harry: 0,
+    beers: 50,
+
+    drinks: function (beers){&&in9 ]
+            return "hungover";
+        }
+    },
+    WDI12: function (fridayMorning){
+        return "deal with life and joel"
+    }
+};
